@@ -1,0 +1,6 @@
+category: Text
+requires: libostyle1 libosp-devel libstdc++6-devel
+sdesc: "DSSSL libraries (development)"
+ldesc: "Jade is James Clark's implementation of DSSSL -- Document Style 
+Semantics and Specification Language -- an ISO standard for formatting 
+SGML (and XML) documents."

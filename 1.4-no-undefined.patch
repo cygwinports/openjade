@@ -1,0 +1,37 @@
+--- origsrc/OpenJade-1.4devel/grove/Makefile.am	2009-03-23 22:12:55.093750000 -0500
++++ src/OpenJade-1.4devel/grove/Makefile.am	2009-03-24 00:33:30.968750000 -0500
+@@ -2,7 +2,7 @@
+ 
+ lib_LTLIBRARIES = libogrove.la
+ 
+-libogrove_la_LDFLAGS = -version-info 1:0:0
++libogrove_la_LDFLAGS = -version-info 1:0:0 -no-undefined
+ 
+ libogrove_la_SOURCES = Node.h Node.cxx LocNode.h LocNode.cxx
+ 
+--- origsrc/OpenJade-1.4devel/spgrove/Makefile.am	2009-06-28 21:47:01.450255200 -0500
++++ src/OpenJade-1.4devel/spgrove/Makefile.am	2009-06-28 21:13:43.000000000 -0500
+@@ -2,7 +2,9 @@
+ 
+ lib_LTLIBRARIES = libospgrove.la
+ 
+-libospgrove_la_LDFLAGS = -version-info 1:0:0
++libospgrove_la_LDFLAGS = -version-info 1:0:0 -no-undefined
++
++libospgrove_la_LIBADD = $(top_builddir)/grove/libogrove.la -losp
+ 
+ libospgrove_la_SOURCES = GroveApp.cxx GroveApp.h GroveBuilder.cxx \
+ 	GroveBuilder.h SdNode.cxx SdNode.h threads.h
+--- origsrc/OpenJade-1.4devel/style/Makefile.am	2009-03-23 22:12:55.781250000 -0500
++++ src/OpenJade-1.4devel/style/Makefile.am	2009-03-24 00:33:49.859375000 -0500
+@@ -2,7 +2,9 @@
+ 
+ lib_LTLIBRARIES = libostyle.la
+ 
+-libostyle_la_LDFLAGS = -version-info 1:0:0
++libostyle_la_LDFLAGS = -version-info 1:0:0 -no-undefined
++
++libostyle_la_LIBADD = $(top_builddir)/spgrove/libospgrove.la $(top_builddir)/grove/libogrove.la -losp
+ 
+ libostyle_la_SOURCES = Collector.cxx Collector.h DssslApp.cxx \
+ 	DssslApp.h DssslAppMessages.h DssslSpecEventHandler.cxx \

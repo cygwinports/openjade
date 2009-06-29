@@ -1,0 +1,31 @@
+Match these to DEFAULT_SCHEMA_BUILTINS.
+
+--- origsrc/OpenJade-1.4devel/contrib/Makefile.am	2009-06-28 21:52:12.515259200 -0500
++++ src/OpenJade-1.4devel/contrib/Makefile.am	2009-06-29 00:23:05.078240700 -0500
+@@ -1,6 +1,6 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+-pkgdatadir = $(datadir)/@PACKAGE@/contrib
++pkgdatadir = $(datadir)/sgml/@PACKAGE@/contrib
+ 
+ pkgdata_DATA = transform.dsl
+ 
+--- origsrc/OpenJade-1.4devel/dsssl/Makefile.am	2009-06-28 21:52:12.084002600 -0500
++++ src/OpenJade-1.4devel/dsssl/Makefile.am	2009-06-28 23:52:36.487265300 -0500
+@@ -1,5 +1,6 @@
+ ## Process this file with automake to produce Makefile.in
+ 
++pkgdatadir = $(datadir)/sgml/@PACKAGE@
+ pkgdata_DATA = builtins.dsl catalog dsssl.dtd \
+ 	style-sheet.dtd spec.dtd fot.dtd extensions.dsl 
+ 
+--- origsrc/OpenJade-1.4devel/unicode/Makefile.am	2009-06-28 21:52:12.547759700 -0500
++++ src/OpenJade-1.4devel/unicode/Makefile.am	2009-06-28 23:52:47.037426500 -0500
+@@ -1,6 +1,6 @@
+ ## Process this file with automake to produce Makefile.in
+ 
+-pkgdatadir = $(datadir)/@PACKAGE@/unicode
++pkgdatadir = $(datadir)/sgml/@PACKAGE@/unicode
+ 
+ pkgdata_DATA = catalog demo.sgm unicode.sd unicode.syn
+ 

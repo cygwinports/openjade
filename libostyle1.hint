@@ -1,0 +1,6 @@
+category: Text
+requires: libgcc1 libosp5 libstdc++6
+sdesc: "DSSSL libraries (runtime)"
+ldesc: "Jade is James Clark's implementation of DSSSL -- Document Style 
+Semantics and Specification Language -- an ISO standard for formatting 
+SGML (and XML) documents."

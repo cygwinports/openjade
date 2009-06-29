@@ -1,0 +1,45 @@
+DESCRIPTION="SGML parser library and utilities"
+HOMEPAGE="http://openjade.sourceforge.net/"
+SRC_URI="mirror://debian/pool/main/o/${PN}/${PN}_${PV}.orig.tar.gz"
+PATCH_URI="mirror://debian/pool/main/o/${PN}/${PN}_${PV}-19.diff.gz
+           1.4-no-undefined.patch
+           1.4-sgml-install.patch"
+
+SRC_DIR=OpenJade-${PV/devel1/devel}
+
+PKG_NAMES="${PN} libostyle1 libostyle-devel"
+openjade_CONTENTS="--exclude=*.dll etc/ usr/bin/ usr/share/"
+libostyle1_CONTENTS="usr/bin/*-1.dll"
+libostyle_devel_CONTENTS="usr/include/ usr/lib/"
+
+DIFF_EXCLUDES="*Messages.cxx *Messages.h Makevars msggen.pl"
+# the debian patch requires us to force these to be rebuilt
+DISTCLEANFILES="jade/*Messages.h style/*Messages.cxx style/*Messages.h"
+
+# for gettext-0.17
+WANT_AUTOMAKE=1.9
+
+src_compile() {
+	cd ${S}
+	cygautoreconf
+	cp -f po/Makevars.template po/Makevars
+	cd ${B}
+	cygconf
+	cygmake
+}
+
+src_test() {
+	lndirs ${S}/dsssl ${B}/dsssl
+	mkdir -p ${B}/testsuite
+	lndirs ${S}/testsuite ${B}/testsuite
+	cd ${B}/testsuite
+	rm -f *.actual
+	cygmake -j1 -k || true
+}
+
+src_install() {
+	cd ${B}
+	cyginstall pkgdocdir=/usr/share/doc/${PN}
+
+	dosym openjade.exe /usr/bin/jade
+}
