@@ -1,2 +1,1 @@
-install-catalog --remove /etc/sgml/jade.cat /usr/share/sgml/OpenJade/catalog
-install-catalog --remove /etc/sgml/jade.cat /usr/share/sgml/OpenJade/unicode/catalog
+install-catalog --remove /etc/sgml/sgml-docbook.cat /usr/share/sgml/OpenJade/catalog

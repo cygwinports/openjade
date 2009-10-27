@@ -5,21 +5,21 @@ Semantics and Specification Language -- an ISO standard for formatting
 SGML (and XML) documents.
 
 Runtime requirements:
-  cygwin-1.7.0-49
-  libgcc1-4.3.2-2
-  libosp5-1.5.2-1
-  libstdc++6-4.3.2-2
+  cygwin-1.7.0-62
+  libgcc1-4.3.4-1
+  libosp5-1.5.2-2
+  libstdc++6-4.3.4-1
 
 Build requirements:
 (besides corresponding -devel packages)
   autoconf2.5-2.63-10
   automake1.10-1.10.2-10
-  binutils-20080624-2
-  cygport-0.9.7-1
-  gawk-3.1.6-2
-  gcc4-core-4.3.2-2
-  gcc4-g++-4.3.2-2
-  libtool-2.2.7a-13
+  binutils-2.19.51-1
+  cygport-0.9.10-1
+  gawk-3.1.7-1
+  gcc4-core-4.3.4-1
+  gcc4-g++-4.3.4-1
+  libtool-2.2.7a-14
   make-3.81-2
   sed-4.1.5-2
 
@@ -46,75 +46,11 @@ This will create:
 
 -------------------------------------------
 
-Files included in the binary package:
-
-  /usr/bin/jade
-  /usr/bin/openjade.exe
-  /usr/share/doc/openjade/ABOUT-NLS
-  /usr/share/doc/openjade/AUTHORS
-  /usr/share/doc/openjade/COPYING
-  /usr/share/doc/openjade/ChangeLog
-  /usr/share/doc/openjade/NEWS
-  /usr/share/doc/openjade/README
-  /usr/share/doc/openjade/demo.dsl
-  /usr/share/doc/openjade/demo.sgm
-  /usr/share/doc/openjade/doc/autoconf.htm
-  /usr/share/doc/openjade/doc/contributors.htm
-  /usr/share/doc/openjade/doc/copying.txt
-  /usr/share/doc/openjade/doc/dsssl2.htm
-  /usr/share/doc/openjade/doc/index.htm
-  /usr/share/doc/openjade/doc/mif.htm
-  /usr/share/doc/openjade/doc/rtf.htm
-  /usr/share/doc/openjade/doc/tex.htm
-  /usr/share/doc/openjade/doc/transform.htm
-  /usr/share/doc/openjade/doc/xmlfo.htm
-  /usr/share/doc/openjade/images/background.gif
-  /usr/share/doc/openjade/images/dsssltitle.gif
-  /usr/share/doc/openjade/images/space.gif
-  /usr/share/doc/openjade/images/top-of-page.gif
-  /usr/share/locale/de/LC_MESSAGES/OpenJade.mo
-  /usr/share/locale/sv/LC_MESSAGES/OpenJade.mo
-  /usr/share/sgml/OpenJade/builtins.dsl
-  /usr/share/sgml/OpenJade/catalog
-  /usr/share/sgml/OpenJade/contrib/transform.dsl
-  /usr/share/sgml/OpenJade/dsssl.dtd
-  /usr/share/sgml/OpenJade/extensions.dsl
-  /usr/share/sgml/OpenJade/fot.dtd
-  /usr/share/sgml/OpenJade/spec.dtd
-  /usr/share/sgml/OpenJade/style-sheet.dtd
-  /usr/share/sgml/OpenJade/unicode/catalog
-  /usr/share/sgml/OpenJade/unicode/demo.sgm
-  /usr/share/sgml/OpenJade/unicode/gensyntax.pl
-  /usr/share/sgml/OpenJade/unicode/unicode.sd
-  /usr/share/sgml/OpenJade/unicode/unicode.syn
-
-(libostyle1)
-  /usr/bin/cygogrove-1.dll
-  /usr/bin/cygospgrove-1.dll
-  /usr/bin/cygostyle-1.dll
-
-(libostyle-devel)
-  /usr/include/OpenJade/DssslApp.h
-  /usr/include/OpenJade/FOTBuilder.h
-  /usr/include/OpenJade/GroveApp.h
-  /usr/include/OpenJade/GroveBuilder.h
-  /usr/include/OpenJade/GroveManager.h
-  /usr/include/OpenJade/Node.h
-  /usr/include/OpenJade/config.h
-  /usr/include/OpenJade/dsssl_ns.h
-  /usr/lib/libogrove.a
-  /usr/lib/libogrove.dll.a
-  /usr/lib/libogrove.la
-  /usr/lib/libospgrove.a
-  /usr/lib/libospgrove.dll.a
-  /usr/lib/libospgrove.la
-  /usr/lib/libostyle.a
-  /usr/lib/libostyle.dll.a
-  /usr/lib/libostyle.la
-
-------------------
-
 Port Notes:
+
+----- version 1.4devel1-2 -----
+Do not register the unicode data with the SGML catalog, as it breaks
+usage with XML DTDs.
 
 ----- version 1.4devel1-1 -----
 Initial release for Cygwin 1.7.

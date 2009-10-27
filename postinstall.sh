@@ -1,2 +1,2 @@
-install-catalog --add /etc/sgml/jade.cat /usr/share/sgml/OpenJade/catalog
-install-catalog --add /etc/sgml/jade.cat /usr/share/sgml/OpenJade/unicode/catalog
+# do NOT register unicode/catalog; it breaks XML usage
+install-catalog --add /etc/sgml/sgml-docbook.cat /usr/share/sgml/OpenJade/catalog
