@@ -1,5 +1,5 @@
 category: Text
-requires: libgcc1 libosp5 libostyle1 libstdc++6
+requires: libgcc1 libosp5 libostyle1 libstdc++6 sgml-common
 sdesc: "DSSSL implementation"
 ldesc: "Jade is James Clark's implementation of DSSSL -- Document Style 
 Semantics and Specification Language -- an ISO standard for formatting 
