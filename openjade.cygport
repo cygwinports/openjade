@@ -1,13 +1,19 @@
-DESCRIPTION="SGML parser library and utilities"
+NAME="openjade"
+VERSION=1.4devel1
+RELEASE=3
+CATEGORY="Text"
+SUMMARY="DSSSL implementation"
+DESCRIPTION="Jade is James Clark's implementation of DSSSL -- Document Style
+Semantics and Specification Language -- an ISO standard for formatting SGML
+(and XML) documents."
 HOMEPAGE="http://openjade.sourceforge.net/"
-SRC_URI="mirror://debian/pool/main/o/${PN}/${PN}_${PV}.orig.tar.gz"
-PATCH_URI="mirror://debian/pool/main/o/${PN}/${PN}_${PV}-19.diff.gz
+SRC_URI="mirror://debian/pool/main/o/${NAME}/${NAME}_${VERSION}.orig.tar.gz"
+SRC_DIR=OpenJade-${VERSION/devel1/devel}
+PATCH_URI="mirror://debian/pool/main/o/${NAME}/${NAME}_${VERSION}-20.1.diff.gz
            1.4-no-undefined.patch
            1.4-sgml-install.patch"
 
-SRC_DIR=OpenJade-${PV/devel1/devel}
-
-PKG_NAMES="${PN} libostyle1 libostyle-devel"
+PKG_NAMES="${NAME} libostyle1 libostyle-devel"
 openjade_CONTENTS="--exclude=*.dll etc/ usr/bin/ usr/share/"
 libostyle1_CONTENTS="usr/bin/*-1.dll"
 libostyle_devel_CONTENTS="usr/include/ usr/lib/"
